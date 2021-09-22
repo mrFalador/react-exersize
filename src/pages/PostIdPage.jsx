@@ -24,20 +24,24 @@ const PostIdPage = () => {
     }, [])
 
     return (
-        <div>
-            <h1>Страница поста {params.id}</h1>
+        <div className="App">
             {isLoading
               ? <Loader/>
-              : <div>{post.id}. {post.title}</div>            
+              :
+              <div style={{marginTop: 10}}> 
+              <h2>{post.id}. {post.title}</h2>
+              <div style={{marginTop: 20}}>{post.body}</div>
+              </div>        
             }
-            <h1>
-                Комментарии
-            </h1>
+            <hr style={{margin: '15px 0'}}/>
+            <h2>
+                Комментарии:
+            </h2>
             {isComLoading
               ? <Loader/>
               : <div>
                   {comments.map(com =>
-                    <div key={com.id} style={{marginTop: 15}}>
+                    <div key={com.id} style={{marginTop: 15}} className="post__comment">
                         <h5>{com.email}</h5>
                         <div>{com.body}</div>
                     </div>

@@ -23,6 +23,15 @@
     align-items: center;
 }
 
+.post__comment {
+    display: block;
+    padding: 15px;
+    border: 2px solid teal;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .remove-btn {
     margin-right: 0.5rem;
 }
@@ -76,4 +85,8 @@
 
 .navbar__links {
     margin-left: auto;
+}
+
+.nav__btn {
+    display: flex;
 }

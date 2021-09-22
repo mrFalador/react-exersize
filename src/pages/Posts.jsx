@@ -78,6 +78,7 @@ function Posts() {
           {value: -1, name: 'Показать все'},
         ]}
       />
+      <hr style={{margin: '15px 0'}}/>
       {
         getError &&
           <h1>Произошла ошибка ${getError}</h1>
